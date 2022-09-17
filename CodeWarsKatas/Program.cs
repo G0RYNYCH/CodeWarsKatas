@@ -38,7 +38,7 @@ static string RepeatStr(int n, string s)
 }
 
 /// <summary>
-/// 
+/// Weather got to pump or not.
 /// </summary>
 /// <param name="distanceToPump"></param>
 /// <param name="mpg"></param>
