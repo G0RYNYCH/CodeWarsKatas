@@ -1,6 +1,4 @@
-﻿string[] names = {"a", "b", "c", "d" };
-
-Console.WriteLine(Likes(names));
+﻿IsValidIp("1.2.3.4");
 
 /// <summary>
 /// The Func returns true if str ends with ending.
@@ -62,4 +60,24 @@ static string Likes(string[] name)
         case 3: return $"{name[0]}, {name[1]} and {name[2]} like this";
         default: return $"{name[0]}, {name[1]} and {name.Length - 2} others like this";
     }
+}
+
+/// <summary>
+/// IP VAlidation.
+/// </summary>
+/// <param name="ipAddres"></param>
+/// <returns></returns>
+static bool IsValidIp(string ipAddress)
+{
+    var splitedString = ipAddress.Split('.');
+
+    if (splitedString.Length != 4)
+        return false;
+        
+
+    foreach (var s in splitedString)
+        if (!(int.Parse(s) <= 255 && int.Parse(s) >= 0))
+            return false;
+
+    return true;
 }
