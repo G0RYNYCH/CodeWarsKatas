@@ -63,7 +63,7 @@ static string Likes(string[] name)
 }
 
 /// <summary>
-/// IP VAlidation.
+/// IP Validation.
 /// </summary>
 /// <param name="ipAddres"></param>
 /// <returns></returns>
@@ -73,11 +73,21 @@ static bool IsValidIp(string ipAddress)
 
     if (splitedString.Length != 4)
         return false;
-        
+
 
     foreach (var s in splitedString)
         if (!(int.Parse(s) <= 255 && int.Parse(s) >= 0))
             return false;
 
     return true;
+
+    /// <summary>
+    /// Return time in milliseconds.
+    /// </summary>
+    /// <param name="ipAddres"></param>
+    /// <returns></returns>
+    static int Past(int h, int m, int s)
+    {
+        return (int)(new TimeSpan(h, m, s)).TotalMilliseconds;
+    }
 }
