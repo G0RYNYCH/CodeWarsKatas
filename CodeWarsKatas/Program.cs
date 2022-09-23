@@ -79,15 +79,15 @@ static bool IsValidIp(string ipAddress)
         if (!(int.Parse(s) <= 255 && int.Parse(s) >= 0))
             return false;
 
-    return true;
+    return true;    
+}
 
-    /// <summary>
-    /// Return time in milliseconds.
-    /// </summary>
-    /// <param name="ipAddres"></param>
-    /// <returns></returns>
-    static int Past(int h, int m, int s)
-    {
-        return (int)(new TimeSpan(h, m, s)).TotalMilliseconds;
-    }
+/// <summary>
+/// Return time in milliseconds.
+/// </summary>
+/// <param name="ipAddres"></param>
+/// <returns></returns>
+static int Past(int h, int m, int s)
+{
+    return (int)(new TimeSpan(h, m, s)).TotalMilliseconds;
 }
