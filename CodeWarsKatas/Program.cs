@@ -78,7 +78,7 @@ static bool IsValidIp(string ipAddress)
         if (!(int.Parse(s) <= 255 && int.Parse(s) >= 0))
             return false;
 
-    return true;    
+    return true;
 }
 
 /// <summary>
@@ -128,3 +128,10 @@ string Rps(string p1, string p2)
 
     return "Draw!";
 }
+
+/// <summary>
+/// Calculate average.
+/// </summary>
+/// <param name="array"></param>
+/// <returns></returns>
+static double FindAverage(double[] array) => array.Length == 0 ? 0 : array.Average();
