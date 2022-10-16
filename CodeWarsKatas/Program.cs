@@ -74,7 +74,6 @@ static bool IsValidIp(string ipAddress)
     if (splitedString.Length != 4)
         return false;
 
-
     foreach (var s in splitedString)
         if (!(int.Parse(s) <= 255 && int.Parse(s) >= 0))
             return false;
@@ -85,9 +84,47 @@ static bool IsValidIp(string ipAddress)
 /// <summary>
 /// Return time in milliseconds.
 /// </summary>
-/// <param name="ipAddres"></param>
+/// <param name="h"></param>
+/// <param name="m"></param>
+/// <param name="s"></param>
 /// <returns></returns>
 static int Past(int h, int m, int s)
 {
     return (int)(new TimeSpan(h, m, s)).TotalMilliseconds;
+}
+
+/// <summary>
+/// Sum without highest and lowest number.
+/// </summary>
+/// <param name="numbers"></param>
+/// <returns></returns>
+static int Sum(int[] numbers)
+{
+    numbers.ToList().Sort();
+
+    return 0;
+}
+
+/// <summary>
+/// Rock Paper Scissors.
+/// </summary>
+/// <param name="p1"></param>
+/// <param name="p2"></param>
+/// <returns></returns>
+string Rps(string p1, string p2)
+{
+    if (p1 == "scissors" && p2 == "paper")
+        return "Player 1 won!";
+    if (p1 == "scissors" && p2 == "rock")
+        return "Player 2 won!";
+    if (p1 == "paper" && p2 == "scissors")
+        return "Player 2 won!";
+    if (p1 == "paper" && p2 == "rock")
+        return "Player 1 won!";
+    if (p1 == "rock" && p2 == "scissors")
+        return "Player 1 won!";
+    if (p1 == "rock" && p2 == "paper")
+        return "Player 2 won!";
+
+    return "Draw!";
 }
