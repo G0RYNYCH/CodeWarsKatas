@@ -1,4 +1,6 @@
-﻿IsValidIp("1.2.3.4");
+﻿int[] test = {1, 2, 3};
+
+PartsSums(test);
 
 /// <summary>
 /// The Func returns true if str ends with ending.
@@ -16,9 +18,6 @@ static bool Solution(string str, string ending) => str.EndsWith(ending);
 /// <param name="flower2"></param>
 /// <returns></returns>
 static bool lovefunc(int flower1, int flower2) => flower1 % 2 != flower2 % 2;
-//{
-//    return (flower1 + flower2) % 2 == 1;            
-//}
 
 /// <summary>
 /// Cocatenate strings n times.
@@ -135,3 +134,24 @@ string Rps(string p1, string p2)
 /// <param name="array"></param>
 /// <returns></returns>
 static double FindAverage(double[] array) => array.Length == 0 ? 0 : array.Average();
+
+/// <summary>
+/// Sums of Parts (Slow version).
+/// </summary>
+/// <param name="ls"></param>
+/// <returns></returns>
+static int[] PartsSumsSlow(int[] ls)
+{
+    List<int> lsList = new List<int>(ls);
+    List<int> result = new List<int>();
+
+    foreach (int i in ls)
+    {
+        result.Add(lsList.Sum());
+        lsList.RemoveAt(0);
+    }
+
+    result.Add(0);
+
+    return result.ToArray();
+}
