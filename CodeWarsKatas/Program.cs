@@ -1,6 +1,6 @@
-﻿int[] test = {1, 2, 3};
+﻿int[] test = { 1, 2, 3, 4, 5, 6 };
 
-PartsSums(test);
+PartsSumsFast(test);
 
 /// <summary>
 /// The Func returns true if str ends with ending.
@@ -154,4 +154,20 @@ static int[] PartsSumsSlow(int[] ls)
     result.Add(0);
 
     return result.ToArray();
+}
+
+/// <summary>
+/// Sums of Parts (Fast version).
+/// </summary>
+/// <param name="ls"></param>
+/// <returns></returns>
+static int[] PartsSumsFast(int[] ls)
+{
+    int[] result = new int[ls.Length + 1];
+    var lsReverse = ls.Reverse().ToArray();
+
+    for (int i = 1; i <= ls.Length; i++)
+        result[i] = lsReverse[i-1] + result[i-1];
+
+    return result.Reverse().ToArray();
 }
