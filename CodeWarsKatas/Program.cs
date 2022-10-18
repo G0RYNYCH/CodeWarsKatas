@@ -1,6 +1,6 @@
-﻿int[] test = { 1, 2, 3, 4, 5, 6 };
+﻿int test = 10;
 
-PartsSumsFast(test);
+CountBits(test);
 
 /// <summary>
 /// The Func returns true if str ends with ending.
@@ -222,3 +222,27 @@ int Max(int[] list) => list.Max();
 /// <param name="x"></param>
 /// <returns></returns>
 static int Multiply(int x) => x % 2 == 0 ? x * 8 : x * 9;
+
+/// <summary>
+/// Remove all vowels.
+/// </summary>
+/// <param name="str"></param>
+/// <returns></returns>
+static string Disemvowel(string str) => new Regex(@"[aeiouAEIOU]").Replace(str, "");
+
+/// <summary>
+/// Bit Counting.
+/// </summary>
+/// <param name="n"></param>
+/// <returns></returns>
+static int CountBits(int n)
+{
+    var result = 0;
+    var binaryString = Convert.ToString(n, 2);
+
+    foreach (char c in binaryString)
+        if (c == '1')
+            result++;
+
+    return result;
+}
