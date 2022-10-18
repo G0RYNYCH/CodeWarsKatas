@@ -183,9 +183,7 @@ static int GetLastDigit(BigInteger n1, BigInteger n2)
     BigInteger result = 1;
 
     for (int i = 0; i < n2; i++)
-    {
         result *= n1;
-    }
 
     return (int)(result % 10);
 }
