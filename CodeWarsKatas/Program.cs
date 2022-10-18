@@ -187,3 +187,10 @@ static int GetLastDigit(BigInteger n1, BigInteger n2)
 
     return (int)(result % 10);
 }
+
+/// <summary>
+/// MakeUpperCase.
+/// </summary>
+/// <param name="str"></param>
+/// <returns></returns>
+static string MakeUpperCase(string str) => str.ToUpper();
