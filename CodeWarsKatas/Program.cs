@@ -215,3 +215,10 @@ int Min(int[] list) => list.Min();
 /// <param name="list"></param>
 /// <returns></returns>
 int Max(int[] list) => list.Max();
+
+/// <summary>
+/// Multiply.
+/// </summary>
+/// <param name="x"></param>
+/// <returns></returns>
+static int Multiply(int x) => x % 2 == 0 ? x * 8 : x * 9;
