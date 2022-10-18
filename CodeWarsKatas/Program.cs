@@ -167,7 +167,7 @@ static int[] PartsSumsFast(int[] ls)
     var lsReverse = ls.Reverse().ToArray();
 
     for (int i = 1; i <= ls.Length; i++)
-        result[i] = lsReverse[i-1] + result[i-1];
+        result[i] = lsReverse[i - 1] + result[i - 1];
 
     return result.Reverse().ToArray();
 }
@@ -201,3 +201,17 @@ static string MakeUpperCase(string str) => str.ToUpper();
 /// <param name="dna"></param>
 /// <returns></returns>
 string dnaToRna(string dna) => dna.Replace('T', 'U');
+
+/// <summary>
+/// Min.
+/// </summary>
+/// <param name="list"></param>
+/// <returns></returns>
+int Min(int[] list) => list.Min();
+
+/// <summary>
+/// Max.
+/// </summary>
+/// <param name="list"></param>
+/// <returns></returns>
+int Max(int[] list) => list.Max();
