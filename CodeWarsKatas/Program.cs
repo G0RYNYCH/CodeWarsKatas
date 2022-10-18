@@ -194,3 +194,10 @@ static int GetLastDigit(BigInteger n1, BigInteger n2)
 /// <param name="str"></param>
 /// <returns></returns>
 static string MakeUpperCase(string str) => str.ToUpper();
+
+/// <summary>
+/// dnaToRna.
+/// </summary>
+/// <param name="dna"></param>
+/// <returns></returns>
+string dnaToRna(string dna) => dna.Replace('T', 'U');
