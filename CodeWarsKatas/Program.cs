@@ -246,3 +246,23 @@ static int CountBits(int n)
 
     return result;
 }
+
+/// <summary>
+/// Detect Pangram.
+/// </summary>
+/// <param name="str"></param>
+/// <returns></returns>
+static bool IsPangram(string str)
+{
+    bool result = true;
+    char[] alphabet = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Y', 'Z' };
+
+    for (int i = 0; i < alphabet.Length; i++)
+        if (!str.ToUpper().Contains(alphabet[i]))
+            result = false;
+
+    return result;
+
+    //return str.Where(ch => Char.IsLetter(ch)).Select(ch => Char.ToLower(ch)).Distinct().Count() == 26;
+}
+
