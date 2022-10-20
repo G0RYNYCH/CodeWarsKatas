@@ -266,3 +266,10 @@ static bool IsPangram(string str)
     //return str.Where(ch => Char.IsLetter(ch)).Select(ch => Char.ToLower(ch)).Distinct().Count() == 26;
 }
 
+/// <summary>
+/// Retern doubled array.
+/// </summary>
+/// <param name="x"></param>
+/// <returns></returns>
+static int[] Maps(int[] x) => x.Select(i => i * 2).ToArray();
+
