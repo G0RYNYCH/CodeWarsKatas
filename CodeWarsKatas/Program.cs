@@ -1,6 +1,6 @@
-﻿int test = 10;
+﻿long test = 155;
 
-CountBits(test);
+FindNextSquare(test);
 
 /// <summary>
 /// The Func returns true if str ends with ending.
@@ -273,3 +273,17 @@ static bool IsPangram(string str)
 /// <returns></returns>
 static int[] Maps(int[] x) => x.Select(i => i * 2).ToArray();
 
+/// <summary>
+/// Find the next perfect square.
+/// </summary>
+/// <param name="num"></param>
+/// <returns></returns>
+static long FindNextSquare(long num)
+{
+    var sqrt = ((long)Math.Sqrt(num));
+
+    if (((long)Math.Pow(sqrt, 2)) != num)
+        return -1;
+
+    return ((long)Math.Pow(sqrt + 1, 2));
+}
