@@ -286,4 +286,9 @@ static long FindNextSquare(long num)
         return -1;
 
     return ((long)Math.Pow(sqrt + 1, 2));
+
+    //long r = (long)Math.Sqrt(num);
+    //if (r * r != num)
+    //    return -1;
+    //return ((r + 1) * (r + 1));
 }
